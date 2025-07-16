@@ -1,0 +1,470 @@
+/* ========== General ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 80px 20px 20px;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 30px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.nav-brand {
+  font-size: 1.5em;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: #00c6ff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #00c6ff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* ========== Form & Inputs ========== */
+form {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: slideUp 1s ease-in-out;
+  max-width: 500px;
+  width: 100%;
+}
+
+input[type="file"],
+input[type="submit"] {
+  padding: 15px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="file"] {
+  background-color: #fff;
+  color: #333;
+}
+
+input[type="submit"] {
+  background-color: #00c6ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0072ff;
+}
+
+/* ========== Image & Results ========== */
+img {
+  max-width: 90%;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  animation: fadeIn 1.5s;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+li {
+  margin: 5px 0;
+  background-color: #ffffff22;
+  padding: 8px 16px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+a {
+  color: #00c6ff;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* ========== Responsive Layout ========== */
+@media (max-width: 768px) {
+  body {
+    padding: 80px 10px 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  input[type="file"],
+  input[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  ul {
+    font-size: 16px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ========== Home Section Styling ========== */
+.home-section {
+  max-width: 1000px;
+  margin: 60px auto; /* Adds margin above and below */
+  padding: 40px 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1.2s ease-in-out;
+  text-align: center;
+}
+
+
+.home-section h2 {
+  font-size: 2.2em;
+  color: #00c6ff;
+  margin-bottom: 20px;
+}
+
+.home-section h3 {
+  font-size: 1.5em;
+  margin-top: 30px;
+  color: #ffffff;
+  border-bottom: 2px solid #00c6ff;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.home-section p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-bottom: 20p
+
+}
+
+
+/* ========== Background Video ========== */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1; /* So it stays behind everything */
+  opacity: 0.25; /* Adjust for visibility */
+  filter: blur(2px) brightness(0.8); /* Optional effects */
+  pointer-events: none; /* Prevents user interaction */
+}
+
+
+/* ========== Footer Styling ========== */
+.footer {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ccc;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.95em;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.85em;
+    padding: 15px 5px;
+  }
+}
+
+
+/* ========== Team Section Carousel ========== */
+.team-section {
+  margin: 60px auto;
+  padding: 40px 20px;
+  max-width: 1000px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.team-section h2 {
+  font-size: 2em;
+  color: #00c6ff;
+  margin-bottom: 30px;
+}
+
+.team-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.team-track {
+  display: flex;
+  gap: 30px;
+  animation: scrollTeam 20s linear infinite;
+  width: max-content;
+}
+
+.team-member {
+  flex: 0 0 auto;
+  width: 160px;
+  text-align: center;
+  color: #fff;
+}
+
+.team-member img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #00c6ff;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.team-member p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.team-member span {
+  display: block;
+  font-size: 0.85em;
+  color: #bbb;
+}
+
+.team-member:hover img {
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes scrollTeam {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-member {
+    width: 120px;
+  }
+
+  .team-member img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+/* ========== Typewriter Effect ========== */
+.typewriter-container {
+  width: 100%;
+  text-align: center;
+  padding: 60px 20px 20px;
+  background: none;
+}
+
+.typewriter-text {
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  font-size: 3em;
+  color: #00c6ff;
+  border-right: 3px solid #00c6ff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3.5s steps(30, end) forwards, blink-caret 0.7s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 22ch } /* adjust to length of your text */
+}
+
+/* Blinking caret */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #00c6ff }
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+  .typewriter-text {
+    font-size: 2em;
+  }
+}
+
+/* ========== Resources Section ========== */
+.resources-section {
+  text-align: center;
+  padding: 50px 20px;
+  margin: 60px auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.resources-section h2 {
+  font-size: 2em;
+  color: #00c6ff;
+  margin-bottom: 25px;
+}
+
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.resource-btn {
+  display: inline-block;
+  background-color: #00c6ff;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px #00c6ff44;
+}
+
+.resource-btn:hover {
+  background-color: #0072ff;
+  box-shadow: 0 0 15px #00c6ffaa;
+}
+
+@media (max-width: 768px) {
+  .resource-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* ========== Background Video ========== */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* Behind everything */
+  opacity: 0.25; /* You can adjust */
+  filter: blur(1px) brightness(0.8);
+  pointer-events: none;
+}
+
+
